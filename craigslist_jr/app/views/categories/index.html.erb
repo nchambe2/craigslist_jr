@@ -1,0 +1,10 @@
+<h1>Welcome to Craigslist Jr.<h1>
+<section>
+  <ul>
+  <% @categories.each do |category| %>
+      <li>
+        <%= category.name %>
+      </li>
+  <% end %>
+  </ul>
+</section>

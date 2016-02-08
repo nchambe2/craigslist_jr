@@ -1,0 +1,6 @@
+<%= link_to 'New Article', new_article_path %>
+<ul>
+  <% @category.articles.each do |article| %>
+    <li><%= article.title %></li>
+  <% end %>
+</ul>
