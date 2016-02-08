@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:category_id])
     @article = Article.find(params[:category_id])
   end
 
@@ -21,7 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    # @category = Category.find(params[:category_id])
+    @category = Category.find(params[:category_id])
     @article = @category.articles.update(params[:id])
   end
 
