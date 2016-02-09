@@ -8,11 +8,12 @@ class ArticlesController < ApplicationController
 
   def new
     @category = Category.find(params[:category_id])
+    @article = Article.new
   end
 
   def edit
     @category = Category.find(params[:category_id])
-    @article = Article.find(params[:category_id])
+    @article = Article.find(params[:article_id])
   end
 
   def create
@@ -22,8 +23,9 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:category_id])
-    @article = @category.articles.update(params[:id])
+    @article = Article.find(params[:article_id])
+    @article.update(article_params)
+    # if you want to keep working on this, use redirect_to
   end
 
   def destroy

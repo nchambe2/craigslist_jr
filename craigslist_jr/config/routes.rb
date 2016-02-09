@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get  '/categories' => 'categories#index'
   get 'categories/:category_id/articles' => 'articles#index', :as => 'category_articles'
   get '/categories/:category_id/articles/new' => 'articles#new', :as => 'new_article'
-  put '/categories/:category_id/articles/:article_id' => 'articles#update', :as => 'article'
+  patch '/categories/:category_id/articles/:article_id' => 'articles#update', :as => 'category_article'
   get 'categories/:category_id/articles/:article_id/edit' => 'articles#edit'
   post '/categories/:category_id/articles' => 'articles#create'
 

@@ -1,14 +1,4 @@
 <h1>Edit Article</h1>
-<%= form_for :article, url: article_path(@category, @article), method: :put do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+
+<%= render "articles/form" %>
+
